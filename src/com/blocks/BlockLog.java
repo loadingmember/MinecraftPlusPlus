@@ -19,6 +19,7 @@ public class BlockLog extends BaseBlock {
 	
 	public void blockDestroyed() {
 		dropItem(block.BLOCK_LOG);
+		addBlockToInventory(block.BLOCK_LOG);
 	}
 	
 	

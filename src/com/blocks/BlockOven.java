@@ -20,6 +20,8 @@ public class BlockOven extends BaseBlock {
 	
 	public void blockDestroyed() {
 		dropItem(block.BLOCK_OVEN);
+		
+		addBlockToInventory(block.BLOCK_OVEN);
 	}
 
 	public void useBlock() {

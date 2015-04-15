@@ -21,5 +21,7 @@ public class BlockStone extends BaseBlock {
 	
 	public void blockDestroyed() {
 		dropItem(block.BLOCK_STONE);
+		
+		addBlockToInventory(block.BLOCK_STONE);
 	}
 }
