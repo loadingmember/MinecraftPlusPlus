@@ -1,4 +1,4 @@
-package com.main;
+package com.entitys;
 
 import com.crafting.*;
 
@@ -10,6 +10,7 @@ public class Player {
 	private int stamina = 10;
 	public int hitDamage;
 	public boolean hit;
+	public boolean jump;
 	
 	private Player() {
 		
@@ -22,9 +23,14 @@ public class Player {
 		} else {
 			health = health;
 		}
-		
-		
-		
+	}
+	
+	private void payStamina(int stamina) {
+		if(stamina == 10 && jump) {
+			payStamina(1);
+		} else {
+			stamina = stamina;
+		}
 	}
 	
 }

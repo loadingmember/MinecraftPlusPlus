@@ -1,8 +1,10 @@
 package com.blocks;
 
+import com.crafting.*;
+
 public class BlockChem extends BaseBlock {
 	
-	BlocksEnum item;
+	BlocksEnum block;
 	
 	@Material(type = "MATERIAL_CHEM")
 	public BlockChem(String blockName, boolean isStackable, int maxStack) {
@@ -14,7 +16,15 @@ public class BlockChem extends BaseBlock {
 	}
 	
 	public void blockDestroyed() {
-		dropItem(item.BLOCK_CHEM);
+		dropItem(block.BLOCK_CHEM);
+		
+		addBlockToInventory(block.BLOCK_CHEM);
+	}
+
+	protected void useBlock(BlocksEnum block) {
+		ChemCrafting chem = new ChemCrafting();
+		
+		chem.open();
 	}
 
 }
