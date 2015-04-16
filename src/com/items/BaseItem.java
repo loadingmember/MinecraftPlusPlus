@@ -36,7 +36,11 @@ public class BaseItem {
 		
 	}
 	
-	public void setCraftingRecipie(BaseItem item, BaseItem item2, BaseItem item3) {
+	public void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {
+		
+	}
+	
+	public void destroyItem() {
 		
 	}
 

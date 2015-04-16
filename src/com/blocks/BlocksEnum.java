@@ -7,6 +7,8 @@ public enum BlocksEnum {
 	BLOCK_ELAB,
 	BLOCK_LAB,
 	BLOCK_OVEN,
-	BLOCK_STONE
+	BLOCK_STONE,
+	BLOCK_WOOD,
+	BLOCK_CHEM
 
 }

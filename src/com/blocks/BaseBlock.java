@@ -11,7 +11,7 @@ public class BaseBlock {
 	public BaseBlock(String blockName, boolean isStackable, int maxStack) {
 	}
 	
-	public void getBlockID(int blockID) {
+	protected void getBlockID(int blockID) {
 		this.blockID = blockID;
 		
 		if(blockID > 100) {
@@ -22,7 +22,7 @@ public class BaseBlock {
 		
 	}
 	
-	public void getTimeToMine(int time) {
+	protected void getTimeToMine(int time) {
 		this.time = time;
 		
 		if(time == 200) {
@@ -32,12 +32,12 @@ public class BaseBlock {
 		}
 	}
 	
-	public void getColor(String color) {
+	protected void getColor(String color) {
 		this.color = color;
 	}
 
 	
-	public void generateBlock(int levelX, int levelY, int levelZ) {
+	protected void generateBlock(int levelX, int levelY, int levelZ) {
 		
 		levelX = levelX * 100;
 		levelY = levelY * 100;
@@ -45,7 +45,7 @@ public class BaseBlock {
 		
 	}
 	
-	public void addBlock(String blockName, boolean isStackable, int maxStack) {
+	protected void addBlock(String blockName, boolean isStackable, int maxStack) {
 		
 		if(isStackable = true) {
 			maxStack = 64;
@@ -55,14 +55,24 @@ public class BaseBlock {
 		
 	}
 	
-	public void addBlockToInventory(BlocksEnum block) {
+	protected void addBlockToInventory(BlocksEnum block) {
 		
 	}
 	
-	public void dropItem(BlocksEnum blocks) {
+	protected void placeBlock(int levelX, int levelY, int levelZ) {
+		
+		if(levelX == 1000000 && levelY < 100000000) {
+			System.out.print("Place Block Invalid");
+		} else {
+			System.out.print("Place Block Valid");
+		}
+		
 	}
 	
-	public void setCraftingRecipie(BaseItem item1, BaseItem item2, BaseItem item3) {
+	protected void dropItem(BlocksEnum blocks) {
+	}
+	
+	protected void setCraftingRecipie(BaseItem item1, BaseItem item2, BaseItem item3) {
 		
 	}
 
