@@ -1,8 +1,12 @@
 package com.blocks;
 
+import com.crafting.ChemInventory;
+import com.items.ItemsEnum;
+
 public class BlockChem extends BaseBlock {
 	
-	BlocksEnum item;
+	ItemsEnum item;
+	BlocksEnum block;
 	
 	@Material(type = "MATERIAL_CHEM")
 	public BlockChem(String blockName, boolean isStackable, int maxStack) {
@@ -11,10 +15,22 @@ public class BlockChem extends BaseBlock {
 		getBlockID(10);
 		getTimeToMine(5);
 		getColor("MATERIAL_CHEM");
+		generateBlock(0, 0, 0);
 	}
 	
 	public void blockDestroyed() {
-		dropItem(item.BLOCK_CHEM);
+		dropItem(block.BLOCK_CHEM);
+		
+		addBlockToInventory(block.BLOCK_CHEM);
+		
+		setCraftingRecipie(item.ITEM_IRON, item.ITEM_TECHNOLOGY, item.ITEM_WIRE);
 	}
-
+	
+	public void useChemLab() {
+		
+		ChemInventory chem = new ChemInventory();
+		
+		System.out.print("You opened the ChemLab");
+		
+	}
 }

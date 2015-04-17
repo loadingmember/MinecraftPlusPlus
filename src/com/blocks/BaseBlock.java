@@ -1,6 +1,7 @@
 package com.blocks;
 
 import com.items.BaseItem;
+import com.items.ItemsEnum;
 
 public class BaseBlock {
 	
@@ -72,7 +73,7 @@ public class BaseBlock {
 	protected void dropItem(BlocksEnum blocks) {
 	}
 	
-	protected void setCraftingRecipie(BaseItem item1, BaseItem item2, BaseItem item3) {
+	protected void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {
 		
 	}
 
