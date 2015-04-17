@@ -1,5 +1,7 @@
 package com.items;
 
+import com.blocks.BlocksEnum;
+
 public class BaseItem {
 	
 	private int itemID;
@@ -8,7 +10,7 @@ public class BaseItem {
 	public BaseItem(String itemName, boolean isStackable, int maxStack) {
 	}
 	
-	public void getItemID(int itemID) {
+	protected void getItemID(int itemID) {
 		this.itemID = itemID;
 		
 		if(itemID > 100) {
@@ -18,7 +20,7 @@ public class BaseItem {
 		}	
 	}
 	
-	public void getTimeToUse(int itemTime) {
+	protected void getTimeToUse(int itemTime) {
 		this.itemTime = itemTime;
 		
 		if(itemTime == 200) {
@@ -28,19 +30,23 @@ public class BaseItem {
 		}
 	}
 	
-	public void addItemToInventory() { //Items Enum soon
+	protected void addItemToInventory() { //Items Enum soon
 		
 	}
 	
-	public void aquireSouce() {
+	protected void addBlockToInventory(BlocksEnum block) {
 		
 	}
 	
-	public void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {
+	protected void aquireSouce() {
 		
 	}
 	
-	public void destroyItem() {
+	protected void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {
+		
+	}
+	
+	protected void destroyItem() {
 		
 	}
 
