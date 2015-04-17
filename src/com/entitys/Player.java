@@ -1,8 +1,11 @@
 package com.entitys;
 
+import com.blocks.BlocksEnum;
 import com.crafting.*;
 
-public class Player {
+public class Player extends BaseEntity {
+	
+	BlocksEnum block;
 	
 	private String user = "Guest";
 	private int health = 100;
@@ -14,9 +17,11 @@ public class Player {
 	
 	private Player() {
 		
+		spawn(1, 1, 1);
+		
 		Inventory playerInventory = new Inventory();
 		playerInventory.setSlots(10);
-		playerInventory.addBlockToSlot("Lab");
+		playerInventory.addBlock(block.BLOCK_LAB);
 		
 		if(hit == true && hitDamage == hitDamage) {
 			health = health - hitDamage;
@@ -26,11 +31,11 @@ public class Player {
 	}
 	
 	private void payStamina(int stamina) {
-		if(stamina == 10 && jump) {
-			payStamina(1);
-		} else {
-			stamina = stamina;
-		}
+		
+		stamina = stamina - stamina;
+		
 	}
+	
+	
 	
 }

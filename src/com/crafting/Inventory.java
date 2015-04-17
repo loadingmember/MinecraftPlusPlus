@@ -1,6 +1,12 @@
 package com.crafting;
 
+import com.blocks.BlocksEnum;
+import com.items.ItemsEnum;
+
 public class Inventory {
+	
+	BlocksEnum block;
+	ItemsEnum item;
 	
 	public Inventory() {
 		
@@ -10,7 +16,11 @@ public class Inventory {
 		
 	}
 	
-	public void addBlockToSlot(String blockname) {
+	public void addBlock(BlocksEnum block) {
+		
+	}
+	
+	public void addItem(ItemsEnum item){
 		
 	}
 

@@ -9,6 +9,7 @@ public enum BlocksEnum {
 	BLOCK_OVEN,
 	BLOCK_STONE,
 	BLOCK_WOOD,
-	BLOCK_CHEM
+	BLOCK_CHEM,
+	BLOCK_WATER // Needds Class
 
 }
