@@ -76,5 +76,9 @@ public class BaseBlock {
 	protected void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {
 		
 	}
+	
+	protected void useBlock(BlocksEnum block) {
+		
+	}
 
 }
