@@ -10,6 +10,10 @@ public class BaseEntity {
 	BlocksEnum block;
 	ItemsEnum item;
 	
+	public BaseEntity() {
+		
+	}
+	
 	
 	protected int entityHealth = 50;
 	public int playerHealth = 100;
@@ -23,18 +27,22 @@ public class BaseEntity {
 	protected int levelY;
 	protected int levelZ;
 	
-	protected void gotHit(int playerHitDamage) {
+	protected boolean gotHit() {
 		
-		if(playerHitDamage == 1) {
+		if(playerHitDamage == 1 && gotHit() == true) {
 			entityHealth = entityHealth - playerHitDamage;
 			death();
-		} else if(playerHitDamage == 2) {
+		} else if(playerHitDamage == 2 && gotHit() == true) {
 			entityHealth = entityHealth - playerHitDamage;
 			death();
-		} else if(playerHitDamage == 3) {
+		} else if(playerHitDamage == 3 && gotHit() == true) {
 			entityHealth = entityHealth - playerHitDamage;
 			death();
+		} else {
+			this.entityHealth = entityHealth;
 		}
+		
+		return false;
 	}
 	
 	protected void isHiting(int damage) {
