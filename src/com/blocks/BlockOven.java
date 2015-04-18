@@ -6,11 +6,11 @@ public class BlockOven extends BaseBlock {
 	
 	BlocksEnum block;
 	
-	@Material(type = "MATERIAL_OVEN")	
+	@Material(type = "MATERIAL_OVEN")
+	@Block(blockID = 4)
 	public BlockOven(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
-		
-		getBlockID(4);
+
 		getTimeToMine(3);
 		getColor("OVEN_MATERIAL");
 		generateBlock(10, 10, 10);

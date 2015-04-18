@@ -173,6 +173,10 @@ public class BaseEntity {
 	protected void walk() {
 		
 	}
+
+	protected boolean isAlive() {
+		return true;
+	}
 	
 	protected void addWeaponToEntity(ItemsEnum itemCoal) {
 		

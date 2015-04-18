@@ -8,10 +8,10 @@ public class BlockStone extends BaseBlock {
 	BlocksEnum block;
 	
 	@Material(type = "MATERIAL_STONE")
+	@Block(blockID = 2)
 	public BlockStone(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
-		
-		getBlockID(2);
+
 		getColor("Grey");
 		getTimeToMine(5);
 		generateBlock(10, 10, 10);

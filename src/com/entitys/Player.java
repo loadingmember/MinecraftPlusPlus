@@ -6,6 +6,7 @@ import com.crafting.*;
 public class Player extends BaseEntity {
 	
 	BlocksEnum block;
+	ActionsEnum action;
 	
 	private String user = "Guest";
 	private int health = 100;
@@ -14,6 +15,10 @@ public class Player extends BaseEntity {
 	public int hitDamage;
 	public boolean hit;
 	public boolean jump;
+
+	private int payStaminaJump;
+	private int payStaminaSprint;
+	private int payStaminaWalk;
 	
 	private Player() {
 		
@@ -31,11 +36,16 @@ public class Player extends BaseEntity {
 	}
 	
 	private void payStamina(int stamina) {
-		
-		stamina = stamina - stamina;
-		
+
+		if(action == ActionsEnum.JUMP) {
+			stamina = stamina - payStaminaJump;
+		} else if(action == ActionsEnum.SPRINT) {
+			stamina = stamina - payStaminaSprint;
+		} else if(action == ActionsEnum.WALK) {
+			stamina = stamina - payStaminaJump;
+		}
 	}
-	
-	
+
+
 	
 }

@@ -8,6 +8,12 @@ public class BaseBlock {
 	private int blockID;
 	private float time;
 	private String color;
+
+	public BlocksEnum block;
+
+	protected int maxLevelY;
+	protected int maxLevelX;
+	protected int maxLevelZ;
 	
 	public BaseBlock(String blockName, boolean isStackable, int maxStack) {
 	}
@@ -39,10 +45,14 @@ public class BaseBlock {
 
 	
 	protected void generateBlock(int levelX, int levelY, int levelZ) {
-		
+
+		maxLevelX = 100;
+		maxLevelY = 100;
+		maxLevelZ = 100;
+
 		levelX = levelX * 100;
 		levelY = levelY * 100;
-		levelZ = levelZ * 100;		
+		levelZ = levelZ * 100;
 		
 	}
 	
@@ -67,10 +77,23 @@ public class BaseBlock {
 		} else {
 			System.out.print("Place Block Valid");
 		}
-		
+
 	}
 	
-	protected void dropItem(BlocksEnum blocks) {
+	protected void dropItem(BlocksEnum block) {
+
+		if(block == BlocksEnum.BLOCK_DIRT) {
+			createMiniBlock(BlocksEnum.BLOCK_DIRT);
+		} else if(block == BlocksEnum.BLOCK_LOG) {
+			createMiniBlock(BlocksEnum.BLOCK_LOG);
+		} else if(block == BlocksEnum.BLOCK_STONE) {
+			createMiniBlock(BlocksEnum.BLOCK_STONE);
+		}
+
+	}
+
+	protected void createMiniBlock(BlocksEnum block) {
+
 	}
 	
 	protected void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {

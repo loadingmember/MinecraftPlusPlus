@@ -11,10 +11,10 @@ public class BlockELab extends BaseBlock {
 	private int z;
 	
 	@Material(type = "MATERIAL_LAB")
+	@Block(blockID = 5)
 	public BlockELab(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
-		
-		getBlockID(5);
+
 		getColor("LAB_MATERIAL");
 		generateBlock(x, y, z);
 		getTimeToMine(5);

@@ -10,4 +10,8 @@ public class Game {
 		
 	}
 
+	public void printToGame(String text) {
+		
+	}
+
 }

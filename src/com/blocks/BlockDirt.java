@@ -7,10 +7,10 @@ public class BlockDirt extends BaseBlock {
 	BlocksEnum block;
 	
 	@Material(type = "MATERIAL_DIRT")
+	@Block(blockID = 1)
 	public BlockDirt(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
 		
-		getBlockID(1);
 		getTimeToMine(3);
 		getColor("Brown/Green");
 		generateBlock(10, 10, 10);
