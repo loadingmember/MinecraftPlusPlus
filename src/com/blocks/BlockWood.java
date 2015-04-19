@@ -23,4 +23,10 @@ public class BlockWood extends BaseBlock {
 	public void useBlock() {
 		placeBlock(1, 1, 1);
 	}
+
+	@Override
+	protected void isSteppedOn() {
+		super.isSteppedOn();
+		playSound("dirt_stepped.wav");
+	}
 }

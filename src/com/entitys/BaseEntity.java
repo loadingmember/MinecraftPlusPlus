@@ -177,6 +177,10 @@ public class BaseEntity {
 	protected boolean isAlive() {
 		return true;
 	}
+
+	protected boolean isOnBlock() {
+		return false;
+	}
 	
 	protected void addWeaponToEntity(ItemsEnum itemCoal) {
 		

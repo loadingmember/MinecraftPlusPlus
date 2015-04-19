@@ -35,4 +35,10 @@ public class BlockELab extends BaseBlock {
 		System.out.println("Emerald Crafting Inventroy Open");
 	}
 
+	@Override
+	protected void isSteppedOn() {
+		super.isSteppedOn();
+		playSound("dirt_stepped.wav");
+	}
+
 }

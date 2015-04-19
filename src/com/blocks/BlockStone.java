@@ -24,4 +24,10 @@ public class BlockStone extends BaseBlock {
 		
 		addBlockToInventory(block.BLOCK_STONE);
 	}
+
+	@Override
+	protected void isSteppedOn() {
+		super.isSteppedOn();
+		playSound("dirt_stepped.wav");
+	}
 }

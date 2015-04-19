@@ -44,7 +44,7 @@ public class BaseBlock {
 	}
 
 	
-	protected void generateBlock(int levelX, int levelY, int levelZ) {
+	public void generateBlock(int levelX, int levelY, int levelZ) {
 
 		maxLevelX = 100;
 		maxLevelY = 100;
@@ -95,6 +95,10 @@ public class BaseBlock {
 	protected void createMiniBlock(BlocksEnum block) {
 
 	}
+
+	protected void playSound(String soundFile) {
+
+	}
 	
 	protected void setCraftingRecipie(ItemsEnum item1, ItemsEnum item2, ItemsEnum item3) {
 		
@@ -102,6 +106,14 @@ public class BaseBlock {
 	
 	protected void useBlock(BlocksEnum block) {
 		
+	}
+
+	protected void isSteppedOn() {
+
+	}
+
+	protected boolean isOnTile() {
+		return false;
 	}
 
 }

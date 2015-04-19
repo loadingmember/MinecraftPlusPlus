@@ -21,7 +21,11 @@ public class BlockLog extends BaseBlock {
 		dropItem(block.BLOCK_LOG);
 		addBlockToInventory(block.BLOCK_LOG);
 	}
-	
-	
+
+	@Override
+	protected void isSteppedOn() {
+		super.isSteppedOn();
+		playSound("dirt_stepped.wav");
+	}
 
 }

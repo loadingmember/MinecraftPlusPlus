@@ -32,7 +32,10 @@ public class BlockOven extends BaseBlock {
 		oven.setFinishSlot();
 	}
 
-	
-	
+	@Override
+	protected void isSteppedOn() {
+		super.isSteppedOn();
+		playSound("dirt_stepped.wav");
+	}
 
 }

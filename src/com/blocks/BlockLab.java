@@ -35,4 +35,10 @@ public class BlockLab extends BaseBlock {
 		System.out.println("Crafting Inventroy Open");
 	}
 
+	@Override
+	protected void isSteppedOn() {
+		super.isSteppedOn();
+		playSound("dirt_stepped.wav");
+	}
+
 }
