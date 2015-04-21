@@ -32,7 +32,7 @@ public class BaseBlock {
 	public void getTimeToMine(float time) {
 		this.time = time;
 		
-		if(time == 200) {
+		if(time == 2000000.0F) {
 			System.out.println("Wow! Bro get a better mining tool");
 		} else {
 			System.out.print("BlockAnnotation Mined. Dropping BlockAnnotation...");
@@ -92,6 +92,12 @@ public class BaseBlock {
 			createMiniBlock(BlocksEnum.BLOCK_LOG);
 		} else if(block == BlocksEnum.BLOCK_STONE) {
 			createMiniBlock(BlocksEnum.BLOCK_STONE);
+		} else if(block == BlocksEnum.BLOCK_LAB) {
+			createMiniBlock(BlocksEnum.BLOCK_LAB);
+		} else if(block == BlocksEnum.BLOCK_ELAB) {
+			createMiniBlock(BlocksEnum.BLOCK_ELAB);
+		} else if(block == BlocksEnum.BLOCK_OVEN) {
+			createMiniBlock(BlocksEnum.BLOCK_OVEN);
 		}
 
 	}

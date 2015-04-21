@@ -28,6 +28,10 @@ public class BlockDirt extends BaseBlock {
 		playSound("dirt_stepped.wav");
 	}
 
+	private void fallDistance(float distance) {
+
+	}
+
 	public void removeGrass() {
 	}
 
