@@ -11,13 +11,14 @@ public class BlockLab extends BaseBlock {
 	private int z;
 	
 	@Material(type = "MATERIAL_LAB")
-	@Block(blockID = 3)
+	@BlockAnnotation(blockID = 3)
 	public BlockLab(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
 
 		getColor("LAB_MATERIAL");
 		generateBlock(x, y, z);
 		getTimeToMine(5);
+		isMineable(true);
 //		setCraftingRecipie(item1, item2, item3);		
 	}
 	

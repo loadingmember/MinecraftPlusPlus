@@ -26,7 +26,7 @@ public class BaseItem {
 		if(itemTime == 200) {
 			System.out.println("Wow! Bro get a better mining tool");
 		} else {
-			System.out.print("Block Mined. Dropping Block...");
+			System.out.print("BlockAnnotation Mined. Dropping BlockAnnotation...");
 		}
 	}
 	

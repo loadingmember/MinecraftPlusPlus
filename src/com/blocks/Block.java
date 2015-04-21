@@ -1,10 +1,14 @@
 package com.blocks;
 
-/**
- * Created by loadingmember on 4/18/15.
- */
-public @interface Block {
+public class Block {
 
-    int blockID() default 0;
-
+    public Block() {
+        final Block lab;
+        final Block ELab;
+        final Block Log;
+        final Block oven;
+        final Block stone;
+        final Block wood;
+        final Block chem;
+    }
 }

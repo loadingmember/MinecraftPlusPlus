@@ -1,19 +1,18 @@
 package com.blocks;
 
-import com.blocks.*;
-
 public class BlockLog extends BaseBlock {
 	
 	BlocksEnum block;
 	
 	@Material(type = "MATERIAL_LOG")
-	@Block(blockID = 6)
+	@BlockAnnotation(blockID = 6)
 	public BlockLog(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
 
 		getColor("Brown");
 		generateBlock(0, 0, 0);
 		getTimeToMine(3);
+		isMineable(true);
 //		setCraftingRecipie(item1, item2, item3);
 	}
 	

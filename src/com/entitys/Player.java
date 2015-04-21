@@ -23,7 +23,6 @@ public class Player extends BaseEntity {
 	private int payStaminaJump = 3;
 	private int payStaminaSprint = 2;
 	private int payStaminaWalk = 2;
-
 	private int staminaPayDealy;
 	
 	public Player() {
@@ -60,6 +59,9 @@ public class Player extends BaseEntity {
 	}
 
 	public void generateInWorld(World world) {
+
+
+
 		spawn(1, 1, 1);
 	}
 }

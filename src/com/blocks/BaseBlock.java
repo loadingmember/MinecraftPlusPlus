@@ -22,20 +22,20 @@ public class BaseBlock {
 		this.blockID = blockID;
 		
 		if(blockID > 100) {
-			System.out.print("ERROR: Block ID to high!!!");
+			System.out.print("ERROR: BlockAnnotation ID to high!!!");
 		} else {
-			System.out.print("Block ID is Perfect");
+			System.out.print("BlockAnnotation ID is Perfect");
 		}
 		
 	}
 	
-	protected void getTimeToMine(int time) {
+	public void getTimeToMine(float time) {
 		this.time = time;
 		
 		if(time == 200) {
 			System.out.println("Wow! Bro get a better mining tool");
 		} else {
-			System.out.print("Block Mined. Dropping Block...");
+			System.out.print("BlockAnnotation Mined. Dropping BlockAnnotation...");
 		}
 	}
 	
@@ -73,11 +73,15 @@ public class BaseBlock {
 	protected void placeBlock(int levelX, int levelY, int levelZ) {
 		
 		if(levelX == 1000000 && levelY < 100000000) {
-			System.out.print("Place Block Invalid");
+			System.out.print("Place BlockAnnotation Invalid");
 		} else {
-			System.out.print("Place Block Valid");
+			System.out.print("Place BlockAnnotation Valid");
 		}
 
+	}
+
+	protected boolean isMineable(boolean mineable) {
+		return true;
 	}
 	
 	protected void dropItem(BlocksEnum block) {

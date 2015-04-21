@@ -1,5 +1,6 @@
 package com.crafting;
 
+import com.Tools.ToolsEnum;
 import com.blocks.BlocksEnum;
 import com.items.ItemsEnum;
 
@@ -20,8 +21,11 @@ public class Inventory {
 		
 	}
 	
-	public void addItem(ItemsEnum item){
-		
+	public void addItem(ItemsEnum item) {
+	}
+
+	public void addTool(ToolsEnum tool) {
+
 	}
 
 }

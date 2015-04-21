@@ -44,6 +44,10 @@ public class BaseEntity {
 		
 		return false;
 	}
+
+	protected void dropItems(ItemsEnum item, int ammount) {
+
+	}
 	
 	protected void isHiting(int damage) {
 		

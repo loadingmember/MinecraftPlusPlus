@@ -7,14 +7,14 @@ public class BlockOven extends BaseBlock {
 	BlocksEnum block;
 	
 	@Material(type = "MATERIAL_OVEN")
-	@Block(blockID = 4)
+	@BlockAnnotation(blockID = 4)
 	public BlockOven(String blockName, boolean isStackable, int maxStack) {
 		super(blockName, isStackable, maxStack);
 
 		getTimeToMine(3);
 		getColor("OVEN_MATERIAL");
 		generateBlock(10, 10, 10);
-		
+		isMineable(true);
 //		setCraftingRecipie(item1, item2, item3);
 	}
 	
