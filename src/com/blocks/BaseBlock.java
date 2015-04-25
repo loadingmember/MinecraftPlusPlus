@@ -126,4 +126,9 @@ public class BaseBlock {
 		return false;
 	}
 
+	protected void fallDistance(float fallDistance) {
+
+	}
 }
+
+

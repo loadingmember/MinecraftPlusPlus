@@ -13,7 +13,7 @@ public class BlockDirt extends BaseBlock {
 		getColor("Brown/Green");
 		generateBlock(10, 10, 10);
 		isMineable(true);
-//		setCraftingRecipie(item1, item2, item3);		
+//		setCraftingRecipie(item1, item2, item3);
 	}
 
 	public void blockDestroyed() {
@@ -26,10 +26,6 @@ public class BlockDirt extends BaseBlock {
 	protected void isSteppedOn() {
 		super.isSteppedOn();
 		playSound("dirt_stepped.wav");
-	}
-
-	private void fallDistance(float distance) {
-
 	}
 
 	public void removeGrass() {
